@@ -10,12 +10,20 @@ This repository includes an implementation of the "Best of Greedy" algorithm for
 
 The algorithm generates designs by running a greedy construction strategy multiple times and selecting the best result (closest to the theoretical lower bound of blocks).
 
+## Installation
+
+You can install the package directly from the source directory:
+
+```bash
+pip install .
+```
+
 ## Usage
 
 ### Python API
 
 ```python
-from groupdesign.best_of_greedy import greedy_design
+from groupdesign import greedy_design
 
 # Generate a design with:
 # n = 7 (number of elements)
@@ -28,7 +36,13 @@ print(design)
 
 ### Command Line Interface
 
-You can also use the CLI to generate designs:
+After installation, you can use the `groupdesign` command:
+
+```bash
+groupdesign 7 3 --t 2 --m 100 --output design.csv
+```
+
+Alternatively, you can run it via `python -m`:
 
 ```bash
 python -m groupdesign.cli 7 3 --t 2 --m 100 --output design.csv
